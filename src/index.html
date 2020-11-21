@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- <meta name="viewport" content="width=device-width, intial-scale=1"> -->
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        <title>Pixel Art Editor</title>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="page">
+            <div class="column">
+                <h1>Pixel Art Editor</h1>
+                <div class="editor_settings">
+                    <h4>grid settings</h4>
+                    <form class="size_settings">
+                        Width:
+                        <input type="number" class="size_width" name="width" min="1" max="64" value="16">
+                        Height:
+                        <input type="number" class="size_height" name="height" min="1" max="64" value="16">
+                        <input type="submit" class="size_submit_button" value="Create">
+                        <h4>Grid On/Off</h4>
+                        <input type="button" class="grid_onoff" value="On/Off">
+                    </form>
+        
+                    <div class="export_settings">
+                        <h4>export as png</h4>
+                        <input type="button" class="export_button" value="export">
+                    </div>
+                </div>
+                <div class="brush_settings">
+                    <h4>brush selector</h4>
+                    <input type="button" class="brush_paint" value="draw">
+                    <input type="button" class="brush_erase" value="erase">
+                    <input type="button" class="brush_fill" value="fill">
+                    <input type="button" class="tool_color_picker" value="color picker">
+        
+                    <h4>color selector</h4>
+                    <input type="color" class="color_selector", value="#f2d71a">
+                </div>
+            </div>
+
+            <div class="column">
+                <table class="grid_canvas"></table>
+            </div>
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+        <script src="editor.js"></script>
+    </body>
+</html>
